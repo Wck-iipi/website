@@ -55,7 +55,7 @@ async function buildMeetings(writePath) {
     writeFileSync(writePath, eventsForHuman);
 
   } catch (err) {
-    throw new Error(`Failed to fetch or process events: ${err.message}`);
+    throw new Error(`Firstly:${process.env.CALENDAR_SERVICE_ACCOUNT} Failed to fetch or process events: ${err.message}`);
   }
 }
 
